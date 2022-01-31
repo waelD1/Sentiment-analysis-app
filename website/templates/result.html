@@ -1,0 +1,104 @@
+<!--
+    Result page
+    Create 3 results with Review, Sentiment and Score information
+    -->
+<head>
+    <title>Result of the review</title>
+    <h1 class = 'title'>Result of the sentiment analysis</h1>
+
+    <style>
+        .title {
+        color: #383772; 
+        font-family: 'Droid serif', serif; 
+        font-size: 36px; 
+        font-weight: 400;
+        font-style: italic; 
+        line-height: 44px; 
+        text-align: center;
+        border: solid 2px;
+
+        }
+
+        .text_to_predict {
+            margin: auto;
+            margin-top: 150px;
+            margin-bottom: 50px;
+            width: 500px;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .sentiment {
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 25px;
+            text-align: center;
+        }
+        .score {
+        font-family: 'Open Sans', sans-serif;
+         font-size: 30px; 
+         font-weight: 700; 
+         line-height: 72px; 
+         margin: 0 0 24px; 
+         margin-top: 10px;
+         text-align: center; 
+         text-transform: uppercase; 
+        }
+
+        .negative {
+            color: red;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .positive {
+            color: green;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            margin-top: 25px;
+            text-align: center;
+
+        }
+        .score_text {
+            font-family: 'Open Sans', sans-serif;
+             font-size: 25px; 
+             font-weight: 300; 
+             margin-top: 80px;
+            text-align: center
+        }
+        .button {
+            background-color: #008CBA;; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+
+<div class="text_to_predict">
+    Review : "{{ text_to_predict }}"
+</div>
+
+Sentiment of the review :
+<div class="{{ sentiment }} == 'Positive Review' ? 'positive' : 'negative'">
+      {{ sentiment }}
+</div>
+<h1 class = score_text > Score of the review (the closer the probability is to 1, the more confident we are of the selected feeling) :</h1>
+
+<div class="score">
+     {{ score }}
+</div>
+
+<button class = button onclick="history.back()">Back to the home page</button>
+</div>
+
+
