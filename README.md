@@ -6,3 +6,10 @@ The model was trained on the Amazon Fine Food Reviews dataset from Kaggle: https
 
 # Home Page
 ![](images/home_page.png)
+
+# Negative review
+![](images/negative_review.png)
+
+# Positive review
+![](images/positive_review.png)
+
